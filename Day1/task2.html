@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        display: inline-block;
+        padding: 20px;
+        background-color: rgb(77, 92, 129);
+        width: 37%;
+        margin-left: 30%;
+      }
+      .form {
+        display: inline-block;
+        padding: 20px;
+        background-color: rgb(246, 250, 252);
+        border-radius: 10px;
+      }
+      .text {
+        color: rgb(75, 204, 161);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+      }
+      .hobbies {
+        font-size: 10px;
+      }
+      .range {
+        color: white;
+        background-color: rgb(75, 204, 161);
+        border-radius: 5px;
+        border: none;
+      }
+      .colsp {
+        width: 95%;
+        height: 20px;
+      }
+      .bio {
+        width: 95%;
+        height: 100px;
+        margin: 0px;
+      }
+      .create {
+        color: white;
+        background-color: rgb(75, 204, 161);
+        border: none;
+        border-radius: 5px;
+        margin: 5px;
+        height: 30px;
+        width: 60px;
+      }
+      .heading {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: grey;
+      }
+      .footer {
+        text-align: end;
+      }
+      .inp {
+        width: 90%;
+        height: 20px;
+      }
+       
+      .income{
+        width: 78%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form action="get" class="form">
+        <table>
+          <thead>
+            <h1 class="heading">Create Account</h1>
+          </thead>
+          <hr />
+          <tr>
+            <td>
+              <label for="fname"
+                ><h1 id="fname" class="text">First Name*</h1></label
+              >
+              <input
+                type="text"
+                for="fname"
+                id="fname"
+                required
+                class="inp"
+                placeholder="Enter First Name"
+              />
+            </td>
+            <td>
+              <h1 id="lname" class="text">Last Name</h1>
+              <input
+                type="text"
+                for="lname"
+                required
+                class="inp"
+                placeholder="Enter Last Name"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h1 class="text">Email*</h1>
+              <input
+                type="email"
+                class="colsp"
+                required
+                placeholder="Enter Your Email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h1 class="text">Password*</h1>
+              <input
+                type="password"
+                required
+                class="inp"
+                placeholder="Enter Your password"
+              />
+            </td>
+            <td>
+              <h1 class="text">Confirm Password*</h1>
+              <input
+                type="password"
+                class="inp"
+                required
+                placeholder="Enter Your password again"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h1 class="text">Gender</h1>
+              <input type="radio" name="gender" value="male" />Male
+              <input type="radio" name="gender" value="female" />Female
+            </td>
+            <td>
+              <h1 class="text">Hobbies</h1>
+              <input type="checkbox" value="Music" />Music
+              <input type="checkbox" value="Sports" />Sport
+              <input type="checkbox" value="Travel" />Travel
+              <input type="checkbox" value="Movies" />Movie
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h1 class="text">Source Of Income</h1>
+              <select name="Source" id="source" class="inp">
+                <option value="Employed">Employed</option>
+                <option value="Student">Student</option>
+                <option value="Businessman">Businessman</option>
+              </select>
+            </td>
+            <td>
+              <h1 class="text">Income</h1>
+              <input type="range" min="0" max="20" class="income" />
+              <button class="range">20k</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h1 class="text">Upload Profile Picture</h1>
+              <input type="file" />
+            </td>
+            <td>
+              <h1 class="text">Age</h1>
+              <input type="number" placeholder="18" class="inp" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <h1 class="text">Bio</h1>
+              <textarea name="bio" id="bio" class="bio"></textarea>
+            </td>
+          </tr>
+        </table>
+        <hr />
+        <div class="footer">
+          <button class="create">Create</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 30%;
+        height: 60%;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: rgb(219, 242, 244);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .container form {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+
+      .inputBox {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 5px;
+        font-size: 20px;
+      }
+
+      .inp {
+        width: 95%;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0px 10px;
+        font-size: 16px;
+        color: #444;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: rgb(0, 119, 255);
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form action="" id="contactForm">
+        <div class="inputBox">
+          <input
+            type="text"
+            id="uname"
+            class="inp"
+            placeholder="Your username...."
+          />
+        </div>
+
+        <div class="inputBox">
+          <input
+            type="password"
+            id="pass"
+            class="inp"
+            placeholder="Your password....."
+          />
+        </div>
+
+        <div class="inputBox">
+          Gender:<input
+            type="radio"
+            id="gender"
+            name="Gender"
+            value="Male"
+          />Male
+          <input type="radio" id="gender" name="Gender" value="Female" />Female
+        </div>
+
+        <div class="inputBox">
+          Select Grade:
+          <select name="menu" id="menu" class="inp">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+          </select>
+        </div>
+
+        <div class="inputBox">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="./Task5.js"></script>
+  </body>
+</html>

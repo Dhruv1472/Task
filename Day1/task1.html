@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form {
+        border: 2px solid black;
+        display: inline-block;
+        padding: 20px;
+      }
+
+      .menu{
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="get" class="form">
+      Username: <input type="text" />
+      <br />
+      <br />
+      Password: <input type="password" />
+      <br />
+      <br />
+      Gender: <input type="radio" name="Gender" id="male" value="male" />Male
+      <input type="radio" name="Gender" id="female" value="male" />Female
+      <br />
+      <br />
+      DropDown Menu:
+      <select name="menu" id="menu" class="menu">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <br />
+      <br />
+      <input type="Submit" />
+    </form>
+  </body>
+</html>

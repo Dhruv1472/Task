@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    .bounce-up {
+      display: inline-block;
+      padding: 20px;
+      margin: 10px;
+      background-color:  blue; 
+      border-radius: 10px;
+      animation: bounceUp 2s ease-in infinite;
+    }
+
+    .fade-in {
+      display: inline-block;
+      padding: 20px;
+      margin: 10px;
+      background-color:red; 
+      border-radius: 10px;
+      animation: fadeIn 3s ease-in-out infinite;
+    }
+
+    .rotate {
+      display: inline-block;
+      padding: 20px;
+      margin: 10px;
+      background-color:  green; 
+      border-radius: 10px;
+      animation: rotate 2.5s linear infinite;
+    }
+ 
+    @keyframes bounceUp {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+       100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bounce-up">Bounce Up</div>
+    <div class="fade-in">Fade In</div>
+    <div class="rotate">Rotate</div>
+  </div>
+</body>
+</html>

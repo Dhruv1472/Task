@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        padding: 10px;
+        border: 2px solid none;
+        display: inline-block;
+        width: 20%;
+        background-color: rgba(233, 235, 234, 0.415);
+        border-radius: 20px;
+        margin-left: 40%;
+      }
+      .inp {
+        width: 90%;
+        border: none;
+        background-color: rgb(219, 224, 224);
+        padding: 5px;
+        border-radius: 2px;
+      }
+      .sub {
+        width: 100%;
+        height: 60%;
+        background-color: rgb(81, 81, 213);
+        padding: 10px;
+        border: none;
+        color: white;
+      }
+      form {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pic {
+        height: 20px;
+        width: 30px;
+      }
+      .no {
+        height: 20px;
+        display: inline-block;
+        font-size: 15px;
+        border: 0px solid black;
+        background-color: rgb(81, 81, 213);
+        width: 20px;
+        text-align: center;
+        border-radius:20px;
+        border-bottom-left-radius: 0px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form action="#">
+        <h2>
+          <div class="no">1</div>
+          Candidate Info
+        </h2>
+        <input type="text" placeholder="Your Name*" class="inp" required />
+        <br />
+        <br />
+        <input type="email" placeholder="Your Email*" class="inp" required />
+        <br />
+        <br />
+        <input type="text" placeholder="About Yourself" class="inp" />
+        <br />
+        <br />
+        <h4>Interest:</h4>
+        <select name="interset" id="interest" class="inp">
+          <option value="Fishkeeping">Fishkeeping</option>
+          <option value="Cricket">Cricket</option>
+        </select>
+
+        <h2>
+          <div class="no">2</div>
+          Additional Info
+        </h2>
+        <input type="text" placeholder="About Your School" class="inp" />
+        <br />
+        <br />
+        <button type="submit" class="sub">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

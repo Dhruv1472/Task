@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Overlay</title>
+    <style> 
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('news.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+ 
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            width: 100vw;
+            height: 100vh;
+        } 
+
+        .grid-cell {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-cell::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: rgba(237, 201, 201, 0.5);  
+            transition: opacity 0.3s ease;
+        }
+ 
+        .grid-cell:hover::before {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container"> 
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+    </div>
+</body>
+</html>
