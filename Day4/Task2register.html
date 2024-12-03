@@ -3,29 +3,107 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="Task2.css" />
+    <title>Document</title> 
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #d3e1e5;
+      }
+
+      .main {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* text-align: center; */
+        width: 40%;
+      }
+
+      h1,
+      h2,
+      label {
+        color: #333;
+        margin-left: 5%;
+      }
+
+      .head {
+        text-align: center;
+      }
+
+      input {
+        width: 85%;
+        padding: 10px;
+        /* margin: 10px 0; */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px 5%;
+      }
+
+      p {
+        font-size: 15px;
+        margin: 15px;
+        margin-left: 5%;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        width: 85%;
+        border-radius: 5px;
+        cursor: pointer;
+        margin:2% 7%;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      a {
+        color: #007bff;
+      }
+
+      .check {
+        display: block;
+      }
+
+      .forgot {
+        text-align: end;
+        margin-right: 8%;
+        color: blue;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
     <div class="main">
-      <h2>Register</h2>
+      <h2 class="head">Register</h2>
       <form id="registerForm">
         <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
+        <input type="text" id="name" name="name" placeholder="Enter Your name" required />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" placeholder="Enter Email" required />
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
+        <input type="password" id="password" name="password" placeholder="Enter Password" required />
         <label for="confirmPassword">Confirm Password:</label>
         <input
           type="password"
           id="confirmPassword"
           name="confirmPassword"
+          placeholder="Re-enter Password"
           required
         />
         <button type="submit">Register</button>
       </form>
-      <p>Already have an account? <a href="Task2login.html">Login here</a></p>
+      <p style="text-align: center;">Already have an account? <a href="Task2login.html">Login here</a></p>
     </div>
     <script src="Task2.js"></script>
   </body>

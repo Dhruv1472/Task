@@ -1,34 +1,40 @@
 function processWords() {
-  dict = {};
-//   document.write("ko");
-  var fs = require("fs");
-  var data = fs.readFileSync("abc.txt", "utf-8");
-  const words = data.split(" ");
-  for (let i = 0; i < words.length; i++) {
-    for (let j = 0; j < words[i].length; j++) {
-      if (words[i][j] in dict) {
-        dict[words[i][j]] += 1;
-      } else {
-        dict[words[i][j]] = 1;
-      }
-      var find = words[i][j];
-      ind_arr = [];
-      if (dict[words[i][j]] == 2) {
-        for (let k = 0; k < words[i].length; k++) {
-          if (words[i][k] == find) {
-            ind_arr.push(k);
-          }
+  const fileInput = document.getElementById("fileInput");
+  const outputDiv = document.getElementById("output");
+
+  const file = fileInput.files[0];
+  const reader = new FileReader();
+
+  reader.onload = function (event) {
+    const data = event.target.result;
+    const words = data.split(" ");
+    let dict = {};
+
+    for (let i = 0; i < words.length; i++) {
+      for (let j = 0; j < words[i].length; j++) {
+        const char = words[i][j];
+        if (dict[char]) {
+          dict[char] += 1;
+        } else {
+          dict[char] = 1;
         }
-        // document.write(words[i] + "--");
-        // document.write(words[i][j] + "->" + ind_arr);
-        console.log(words[i] + "--");
-        console.log(words[i][j] + "->" + ind_arr);
+
+        if (dict[char] === 2) {
+          let indices = [];
+          for (let k = 0; k < words[i].length; k++) {
+            if (words[i][k] === char) {
+              indices.push(k);
+            }
+          }
+
+          const wordOutput = `<p>${words[i]} -- ${char} -> ${indices.join(
+            ", "
+          )}</p>`;
+          outputDiv.innerHTML += wordOutput;
+        }
       }
+      Object.keys(dict).forEach((key) => (dict[key] = 0));
     }
-    var key = Object.keys(dict);
-    for (let i = 0; i < key.length; i++) {
-      dict[key[i]] = 0;
-    }
-  }
+  };
+  reader.readAsText(file);
 }
-processWords();

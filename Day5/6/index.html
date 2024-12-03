@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zomato</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="head">
+        <img src="zomato.png" alt="zomato" class="zomato-img" />
+        <div class="searchbar">
+          <i class="fa fa-map-marker loc" aria-hidden="true"></i>
+          <select name="city" id="city" class="option">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Surat">Surat</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="vapi">Vapi</option>
+          </select>
+          <span>|</span>
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            class="innersearch"
+            placeholder="Search for restaurant, cuisine or a dish"
+          />
+        </div>
+        <button class="cart-link">Login</button>
+        <button class="cart-link">Sign up</button>
+        <a href="cart.html" class="cart-link">View Cart</a> 
+      </div>
+    </header>
+
+    <main>
+      <div class="inspiration">
+        <h1 class="inspirationheading">Dishes</h1>
+        <div class="imag">
+          <img src="thali.jpg" alt="thali " class="inner-img fisrtimg" />
+          <h1 class="imageh1">Thali</h1>
+        </div>
+        <div class="imag">
+          <img src="vegmeal.jpg" alt="vegmeal " class="inner-img" />
+          <h1 class="imageh1">Veg meal</h1>
+        </div>
+        <div class="imag">
+          <img src="biryani.jpg" alt="biryani " class="inner-img" />
+          <h1 class="imageh1">Biryani</h1>
+        </div>
+        <div class="imag">
+          <img src="pizza2.jpg" alt="pizza " class="inner-img" />
+          <h1 class="imageh1">Pizza</h1>
+        </div>
+
+        <div class="imag">
+          <img src="burger2.jpg" alt="burger " class="inner-img" />
+          <h1 class="imageh1">Burger</h1>
+        </div>
+        <div class="imag">
+          <img src="cake.jpg" alt="cake " class="inner-img" />
+          <h1 class="imageh1">Cake</h1>
+        </div>
+      </div>
+
+      <div class="toppicks">
+        <h1 class="tophead">Top Brands For You</h1>
+        <div class="brand">
+          <img src="macd.png" alt="McDonald" class="brand-image" />
+          <p class="brand-name">McDonald's</p>
+          <p class="brand-time">13 min</p>
+        </div>
+        <div class="brand">
+          <img src="lapino.png" alt="lapino" class="brand-image" />
+          <p class="brand-name">La pino'z</p>
+          <p class="brand-time">17 min</p>
+        </div>
+        <div class="brand">
+          <img src="gwalia.jpg" alt="gwalia" class="brand-image" />
+          <p class="brand-name">Gwalia Sweets and Fast Food</p>
+          <p class="brand-time">15 min</p>
+        </div>
+        <div class="brand">
+          <img src="foodonway.png" alt="Food On Way" class="brand-image" />
+          <p class="brand-name">McDonald's</p>
+          <p class="brand-time">17 min</p>
+        </div>
+        <div class="brand">
+          <img src="honest.png" alt="honest" class="brand-image" />
+          <p class="brand-name">Honest</p>
+          <p class="brand-time">20 min</p>
+        </div>
+        <div class="brand">
+          <img src="lamilano.png" alt="lamilano" class="brand-image" />
+          <p class="brand-name">La Milano Pizzeria</p>
+          <p class="brand-time">19 min</p>
+        </div>
+      </div>
+
+      <div class="menu">
+        <div class="item" data-name="Pizza" data-price="200">
+          <div class="imagediv">
+            <img src="pizza.jpg" alt="Pizza" />
+          </div>
+          <h2>Pizza</h2>
+          <p>Price: ₹200</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Burger" data-price="150">
+          <div class="imagediv">
+            <img src="burger.jpg" alt="Burger" />
+          </div>
+          <h2>Burger</h2>
+          <p>Price: ₹150</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Pasta" data-price="250">
+          <div class="imagediv">
+            <img src="pasta.jpg" alt="Pasta" />
+          </div>
+          <h2>Pasta</h2>
+          <p>Price: ₹250</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Sushi" data-price="500">
+          <div class="imagediv">
+            <img src="sushi.jpg" alt="Sushi" />
+          </div>
+          <h2>Sushi</h2>
+          <p>Price: ₹500</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Biryani" data-price="300">
+          <div class="imagediv">
+            <img src="biryani.jpg" alt="Biryani" />
+          </div>
+          <h2>Biryani</h2>
+          <p>Price: ₹300</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Noodles" data-price="200">
+          <div class="imagediv">
+            <img src="noodles.jpg" alt="Noodles" />
+          </div>
+          <h2>Noodles</h2>
+          <p>Price: ₹200</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Salad" data-price="100">
+          <div class="imagediv">
+            <img src="salad.jpg" alt="Salad" />
+          </div>
+          <h2>Salad</h2>
+          <p>Price: ₹100</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Fries" data-price="120">
+          <div class="imagediv">
+            <img src="fries.jpg" alt="Fries" />
+          </div>
+          <h2>Fries</h2>
+          <p>Price: ₹120</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Steak" data-price="700">
+          <div class="imagediv">
+            <img src="steak.jpg" alt="Steak" />
+          </div>
+          <h2>Steak</h2>
+          <p>Price: ₹700</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="item" data-name="Tacos" data-price="250">
+          <div class="imagediv">
+            <img src="tacos.jpg" alt="Tacos" />
+          </div>
+          <h2>Tacos</h2>
+          <p>Price: ₹250</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-section">
+        <h1 class="footer-heading">Explore options near me</h1>
+        <div class="faq">
+          <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">
+              Popular Cuisines Near Me
+            </h3>
+            <p class="faq-answer">
+              Bakery near me : Beverages near me : Biryani near me : Burger near
+              me: Cafe near me : Chinese near me : Coffee near me : Continental
+              near me: Desserts near me : Gujarati near me: Ice Cream near me :
+              Italian near me : North Indian near me: Pasta near me : Pizza near
+              me : Sandwich near me : Shake near me: South Indian near me :
+              Street near me : Tea near me
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">
+              Popular Restaurant Types Near me
+            </h3>
+            <p class="faq-answer">
+              Bakeries near me : Bars near me: Beverage Shops near me :
+              Bhojanalya near me : Cafés near me: Casual Dining near me :
+              Dessert Parlors near me : Dhabas near me: Fine Dining near me:
+              Food Courts near me : Food Trucks near me : Kiosks near me:
+              Lounges near me: Paan Shop near me: Quick Bites near me : Sweet
+              Shops near me
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">
+              Top Restaurant Chains
+            </h3>
+            <p class="faq-answer">
+              Bikanervala : McDonald's : Burger King : Pizza Hut : Burger Singh : WOW!
+              Momo : Dunkin' Donuts : KFC
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">
+              How do I find vegetarian options near me?
+            </h3>
+            <p class="faq-answer">
+              Use the search bar to look for vegetarian dishes or select from
+              curated vegetarian restaurants near you.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3 class="faq-question" onclick="toggleAnswer(this)">
+              What are Zomato delivery times?
+            </h3>
+            <p class="faq-answer">
+              Delivery times vary by restaurant and location but typically range
+              from 15-45 minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="topbar">
+        <img src="zomato.png" alt="zomato" class="zomato-img" />
+        <div class="dropdowns">
+          <select class="dropdown" name="country" id="country">
+            <option value="India" selected>India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+          </select> 
+          <select class="dropdown" name="language" id="language">
+            <option value="English" selected>English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Spanish">Spanish</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="five-sections"> 
+        <div class="section">
+          <h2>ABOUT ZOMATO</h2>
+          <a href="#" class="footer-link">Who we are</a>
+          <a href="#" class="footer-link">Blog</a>
+          <a href="#" class="footer-link">Work with us</a>
+          <a href="#" class="footer-link">Investors relation</a>
+          <a href="#" class="footer-link">Report Fraud</a>
+          <a href="#" class="footer-link">Press kit</a>
+          <a href="#" class="footer-link">Contact us</a>
+        </div>
+        <div class="section">
+          <h2>ZOMAVERSE</h2>
+          <a href="#" class="footer-link">Zomato</a>
+          <a href="#" class="footer-link">Blinkit</a>
+          <a href="#" class="footer-link">District</a>
+          <a href="#" class="footer-link">Feeding india</a>
+          <a href="#" class="footer-link">Hyperure</a>
+          <a href="#" class="footer-link">Zomato Live</a>
+          <a href="#" class="footer-link">Zomatoland</a>
+          <a href="#" class="footer-link">Weather Unicon</a>
+        </div>
+        <div class="section">
+          <h2>FOR RESTAURANT</h2>
+          <a href="#" class="footer-link">Partner With us</a>
+          <a href="#" class="footer-link">Apps for you</a>
+        </div>
+        <div class="section">
+          <h2>LEARN MORE</h2>
+          <a href="#" class="footer-link">Privacy</a>
+          <a href="#" class="footer-link">Security</a>
+          <a href="#" class="footer-link">Terms</a>
+        </div>
+        <div class="section social-section">
+          <h2>SOCIAL LINKS</h2>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fa fa-youtube"></i></a>
+          </div>
+          <div class="store-buttons">
+            <a href="#" class="store-button">
+              <img src="appstore.png" alt="App Store" />
+            </a>
+            <a href="#" class="store-button">
+              <img src="playstore.png" alt="Play Store" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <hr size="2" />
+      <p class="lastp">
+        By continuing past this page, you agree to our Terms of Service, Cookie
+        Policy, Privacy Policy and Content Policies. All trademarks are
+        properties of their respective owners. 2008-2024 © Zomato™ Ltd. All
+        rights reserved.
+      </p>
+    </footer>
+    <script>
+      function toggleAnswer(questionElement) {
+        const answerElement = questionElement.nextElementSibling;
+        if (answerElement.style.display === "block") {
+          answerElement.style.display = "none";
+        } else {
+          answerElement.style.display = "block";
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <link rel="stylesheet" href="cart.css">
+  <body>
+    <header>
+      <div class="head">
+        <img src="zomato.png" alt="zomato" class="zomato-img" />
+        <div class="searchbar">
+          <i class="fa fa-map-marker loc" aria-hidden="true"></i>
+          <select name="city" id="city" class="option">
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Surat">Surat</option>
+            <option value="Vadodara">Vadodara</option>
+            <option value="vapi">Vapi</option>
+          </select>
+          <span>|</span>
+          <i class="fa fa-search"></i>
+          <input
+            type="text"
+            class="innersearch"
+            placeholder="Search for restaurant, cuisine or a dish"
+          />
+        </div>
+        <button class="cart-link">Login</button>
+        <button class="cart-link">Sign up</button>
+        <a href="index.html" class="cart-link">Go to home</a>
+      </div>
+    </header>
+    <h1>Your Cart</h1>
+    <main >
+      <div style="display: flex;" class="cart-items"></div>
+      <p class="total-price" ></p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

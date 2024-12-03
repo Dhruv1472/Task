@@ -1,8 +1,15 @@
+import java.util.*;
+
 public class Task7 {
     public static void main(String[] args) {
-        for (int i = 0; i <= 8; i++) {
-            for (int j = 0; j <= 3; j++) {
-                if ((i==0 || j==0 || i==8 || j==3 || i==4) && !((i==0 && j==0) || (i==0 && j==3) || (i==8 && j==3)|| (i==8 && j==0)|| (i==4 && j==0)|| (i==4 && j==3))) {
+        Scanner sc = new Scanner(System.in);
+        int no = sc.nextInt();
+        for (int i = 0; i <= no; i++) {
+            for (int j = 0; j <= (no / 2) - 1; j++) {
+                if ((i == 0 || j == 0 || i == no || j == (no / 2) - 1 || i == no / 2)
+                        && !((i == 0 && j == 0) || (i == 0 && j == (no / 2) - 1)
+                                || (i == no && j == (no / 2) - 1) || (i == no && j == 0) || (i == no / 2 && j == 0)
+                                || (i == no / 2 && j == (no / 2) - 1))) {
                     System.out.print(" * ");
                 } else {
                     System.out.print("   ");

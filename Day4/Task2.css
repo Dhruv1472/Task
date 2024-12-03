@@ -14,19 +14,32 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+}
+
+h1, h2,label {
+    color: #333;
+    margin-left: 5%;
+}
+
+.head{
     text-align: center;
 }
 
-h1, h2 {
-    color: #333;
-}
-
 input {
-    width: 95%;
+    width: 85%;
     padding: 10px;
-    margin: 10px 0;
+    /* margin: 10px 0; */
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 10px 5%;
+}
+
+p{
+    font-size: 15px;
+    margin: 15px;
+    margin-left: 5%;
+    
 }
 
 button {
@@ -34,8 +47,10 @@ button {
     color: white;
     padding: 10px 15px;
     border: none;
+    width: 500px;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 5%; 
 }
 
 button:hover {
@@ -46,4 +61,14 @@ a {
     color: #007BFF; 
 }
 
- 
+.check{
+    display: block;
+}
+
+.forgot{
+    text-align: end;
+    margin-right: 8%;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}

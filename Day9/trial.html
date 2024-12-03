@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Circles</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+        overflow: hidden;
+      }
+
+      .circle {
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .red {
+        background-color: red;
+      }
+
+      .blue {
+        background-color: blue;
+      }
+
+      #outer-circle {
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #draggable-circle {
+        width: 50px;
+        height: 50px;
+        top: 20px;
+        left: 20px;
+        cursor: grab;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer-circle" class="circle blue"></div>
+    <div id="draggable-circle" class="circle red"></div>
+
+    <script>
+      const draggableCircle = document.getElementById("draggable-circle");
+      const outerCircle = document.getElementById("outer-circle");
+
+      let currentSize = 50; // Initial size of the draggable circle
+
+      // Helper function to generate a random color
+      function getRandomColor() {
+        return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      }
+
+      // Make the circle draggable
+      draggableCircle.onmousedown = (event) => {
+        event.preventDefault();
+
+        let shiftX =
+          event.clientX - draggableCircle.getBoundingClientRect().left;
+        let shiftY =
+          event.clientY - draggableCircle.getBoundingClientRect().top;
+
+        const moveAt = (pageX, pageY) => {
+          draggableCircle.style.left = pageX - shiftX + "px";
+          draggableCircle.style.top = pageY - shiftY + "px";
+        };
+
+        const onMouseMove = (event) => {
+          moveAt(event.pageX, event.pageY);
+        };
+
+        document.addEventListener("mousemove", onMouseMove);
+
+        document.onmouseup = (event) => {
+          document.removeEventListener("mousemove", onMouseMove);
+          document.onmouseup = null;
+
+          // Check if the circle is dropped inside the outer circle
+          const draggableRect = draggableCircle.getBoundingClientRect();
+          const outerRect = outerCircle.getBoundingClientRect();
+
+          const isInside =
+            draggableRect.left >= outerRect.left &&
+            draggableRect.right <= outerRect.right &&
+            draggableRect.top >= outerRect.top &&
+            draggableRect.bottom <= outerRect.bottom;
+
+          if (isInside) {
+            shrinkAndAddCircle();
+          }
+        };
+      };
+
+      draggableCircle.ondragstart = () => false;
+
+      // Handle shrinking and creating new circles
+      function shrinkAndAddCircle() {
+        if (currentSize > 5) {
+          // Reduce size
+          currentSize *= 0.8;
+
+          // Create a new inner circle
+          const newInnerCircle = document.createElement("div");
+          newInnerCircle.classList.add("circle");
+          newInnerCircle.style.width = `${currentSize}px`;
+          newInnerCircle.style.height = `${currentSize}px`;
+          newInnerCircle.style.backgroundColor =
+            draggableCircle.style.backgroundColor;
+
+          newInnerCircle.style.position = "absolute";
+          newInnerCircle.style.top = "50%";
+          newInnerCircle.style.left = "50%";
+          newInnerCircle.style.transform = `translate(-50%, -50%)`;
+
+          outerCircle.appendChild(newInnerCircle);
+
+          // Create a new draggable circle
+          draggableCircle.style.backgroundColor = getRandomColor();
+          draggableCircle.style.left = "20px";
+          draggableCircle.style.top = "20px";
+          draggableCircle.style.width = "50px";
+          draggableCircle.style.height = "50px";
+        } else {
+          alert("The circle is now too small to continue!");
+        }
+      }
+    </script>
+  </body>
+</html>

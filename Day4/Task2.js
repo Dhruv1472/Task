@@ -6,7 +6,14 @@ document
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (password !== confirmPassword) {
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (!passwordRegex.test(password)) {
+      alert(
+        "Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a digit, and a special character."
+      );
+    } else if (password !== confirmPassword) {
       alert("Passwords do not match!");
     } else {
       alert("Registration successful!");
@@ -20,7 +27,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  if (email === "test@example.com" && password === "password") {
+  if (email == "test@example.com" && password == "password") {
     alert("Login successful!");
     window.location.href = "Task2welcome.html";
   } else {
